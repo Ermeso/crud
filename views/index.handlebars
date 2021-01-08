@@ -1,0 +1,94 @@
+<nav>
+    <div class="burger">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </div>
+
+    <ul>
+        <li class="read"><a href="/read">READ</a></li>
+        <li class="create">CREATE</li>
+    </ul>
+
+    <h1 class="logo"><a href="/">CRUD</a></h1>
+
+    <ul class="ul2">
+        <li class="alterar">UPDATE</li>
+        <li class="delete"><a href="/read">DELETE</a></li>
+    </ul>
+</nav>
+
+<section class="section-index">
+    <h1 class="title">O QUE É CRUD?</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla elit at mauris vulputate, vel ultrices nisl sodales. Nulla eros sem, condimentum in tristique eget, tristique non sem. Mauris ultrices, mi in sagittis viverra, purus ex placerat augue, non condimentum diam purus eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus tellus neque, lobortis id tempus nec, faucibus nec neque. In aliquet in velit a finibus. Nam dapibus, tellus malesuada aliquet vestibulum, enim sapien laoreet purus, non ullamcorper lacus est non antez
+    </p>
+</section>
+
+<div class="modal-bg" id="fechar-modal">
+    <div class="modal">
+        <div class="modal-content">
+            <h1 class="title">CREATE</h1>
+            <form action="/create" method="post" class="form-modal">
+                <div>
+                    <input type="text" name="nome" placeholder="Username" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="senha" placeholder="Password" required>
+                </div>
+                    <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-bg-alter" id="fechar-modal">
+    <div class="modal">
+        <div class="modal-content">
+            <h1 class="title">UPDATE</h1>
+            <form action="/update" method="post" class="form-modal">
+                <div>
+                    <p>O Campo que deseja alterar</p><br/>
+                    <select name="campo" required>
+                        <div class="opt-container">
+                            <option value="nome" selected>Nome</option>
+                            <option value="email">Email</option>
+                        </div>
+                    </select><br/><br/>
+                    <input type="text" name="mudanca" placeholder="A alteração" required><br/><br/>
+                    <input type="number" name="id" placeholder="Id" required>
+                    <br/><br/>
+                </div>
+                
+                <input type="submit" value="Alterar" class="submit-update">
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="infos-footer primary-infos">
+        <p class="copy">&copy;2020 Seila</p>
+        <h1>Landie</h1>
+        <a href="#"><i class="fab fa-discord" id="discord"></i></a>
+    </div>
+    <hr/>
+    <div class="infos-footer secondary-infos">
+        <div class="items">
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>

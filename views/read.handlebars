@@ -1,0 +1,83 @@
+<nav>
+    <div class="burger">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </div>
+
+    <ul>
+        <li class="read"><a href="/read">READ</a></li>
+        <li class="create">CREATE</li>
+    </ul>
+
+    <h1 class="logo"><a href="/">CRUD</a></h1>
+
+    <ul class="ul2">
+        <li class="alterar">UPDATE</li>
+        <li class="delete"><a href="/read">DELETE</a></li>
+    </ul>
+</nav>
+
+<div class="modal-bg" id="fechar-modal">
+    <div class="modal">
+        <div class="modal-content">
+            <h1 class="title">CREATE</h1>
+            <form action="/create" method="post" class="form-modal">
+                <div>
+                    <input type="text" name="nome" placeholder="Username" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="senha" placeholder="Password" required>
+                </div>
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-bg-alter" id="fechar-modal">
+    <div class="modal">
+        <div class="modal-content">
+            <h1 class="title">UPDATE</h1>
+            <form action="/update" method="post" class="form-modal">
+                <div>
+                    <p>O Campo que deseja alterar</p><br/>
+                    <select name="campo" required>
+                        <div class="opt-container">
+                            <option value="nome" selected>Nome</option>
+                            <option value="email">Email</option>
+                        </div>
+                    </select><br/><br/>
+                    <input type="text" name="mudanca" placeholder="A alteração" required><br/><br/>
+                    <input type="number" name="id" placeholder="Id" required>
+                    <br/><br/>
+                </div>
+                
+                <input type="submit" value="Alterar" class="submit-update">
+            </form>
+        </div>
+    </div>
+</div>
+
+<section class="section-read">
+    <div class="title-container">
+        <h1>Listagem dos Dados</h1>
+    </div>
+        {{#each dados}}
+            <div class="dados">
+                <p>Id: <strong>{{id}}</strong></p><br/>
+                <p>Nome: <strong>{{nome}}</strong></p><br/>
+                <p>Email: <strong>{{email}}</strong></p><br/>
+                <p>Data de Cadastro: <strong>{{#formatDate createdAt}}{{/formatDate}}</strong> </p>
+                <div class="buttons-container">
+                    <div class="buttons">
+                        <a href="/delete/{{id}}"><strong>Apagar</strong></a>
+                        <p class="alterar"><strong>Alterar</strong></p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+</section>

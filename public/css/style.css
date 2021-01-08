@@ -1,0 +1,593 @@
+/* Estilização Geral */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: none;
+    color: #EAEAEA;
+}
+
+li {
+    cursor: pointer;
+}
+
+p {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+h1 {
+    color: #fff;
+    font-size: 5rem;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #424242;
+}
+
+/* Estilização da Navbar */
+
+nav {
+    color: #fff;
+    display: flex;
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.lines {
+    height: 5px;
+    width: 35px;
+    border-radius: 2px;
+    background-color:  #fff;
+    transition: 0.5s;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: #fff;
+}
+
+.logo a{
+    color: #fff;
+}
+
+ul, ul a {
+    font-size: 2rem;
+    list-style: none;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* Estilização da index */
+
+.section-index {
+    display: flex;
+    margin: auto;
+    margin-top: 15vh;
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 20vh;
+}
+
+.title-container {
+    text-align: center;
+}
+
+section .title {
+    font-size: 5rem;
+    padding-bottom: 10vh;
+    color: #EEBB0F;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+}
+
+section p {
+    font-size: 2.4rem;
+    color: #ECECEC;
+    font-style: normal;
+    font-weight: normal;
+}
+
+footer {
+    width: 100vw;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .infos-footer {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+footer p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 171%;
+    color: #fff;
+}
+
+footer .copy {
+    color: #fff;
+    margin-top: 0px;
+}
+
+footer h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 146%;
+    color: #fff;
+}
+
+.secondary-infos {
+    padding-top: 15px;
+}
+
+footer .infos-footer .button {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #111B47;
+    background: #fff;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 6px 20px; 
+    text-align: center;
+    justify-content: center;
+}
+
+.infos-footer .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23%;
+}
+
+.social {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+#discord {
+    font-size: 3.5rem;
+}
+
+hr {
+    border: none;
+    background-color: #fff;
+    height: 1px;
+    width: 85vw;
+}
+
+/* Janelas Modais */
+
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-bg-alter {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal {
+    display: flex;
+    height: 85vh;
+    border-radius: 5px;
+    width: 30%;
+    background-color: #f8c008;
+    box-shadow: #ffc400 0 0 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    align-items: center;
+}
+
+.modal-content .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    height: 30vh;
+}
+
+.form-modal div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select {
+    background-color: rgb(255, 255, 255);
+    padding: 2px 20px;
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 5px 6px;
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    border: 2px solid #fff;
+    outline: none;
+}
+
+.form-modal input {
+    text-indent: 5px;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 1rem;
+    border: 2px solid #ffffff;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    color: #f1f1f1;
+}
+
+.form-modal input[type='submit'] {
+    border: none;
+    background-color: #fff;
+    padding: 4px 30px;
+    color: #f8c008;
+    border-radius: 5px;
+}
+
+.form-modal p {
+    font-size: 1.8rem;
+}
+
+.form-modal .field {
+    width: 60%;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    box-shadow: #fff 0 0 2px;
+    overflow: hidden;
+}
+
+.form-modal input::-webkit-input-placeholder{
+    color:#fff;
+}
+
+.form-modal input::-moz-placeholder {
+    color:#fff;
+}
+
+.form-modal .field:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.modal-active {
+    display: flex;
+}
+
+.modal-disable {
+    display: none;
+}
+
+/* Estilização da Página de Listagem */
+
+.section-read {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10vh;
+    justify-content: center;
+    padding-bottom: 20vh;
+}
+
+.section-read .dados {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 2px;
+    min-width: 40%;
+    padding: 15px;
+    justify-content: center;
+}
+
+.section-read .dados p {
+    color: #666;
+    padding: 10px 0;
+}
+
+.section-read .dados .buttons-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-read .dados .buttons {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-read .dados a, .section-read .dados .alterar {
+    padding: 0.5rem 3rem;
+    color: #fff;
+    background-color: rgb(59, 59, 59);
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+/* media queries */
+@media (max-width: 1200px) {
+    ul {
+        width: 25%;
+    }
+}
+
+@media (max-width: 970px) {
+    ul {
+        width: 28%;
+    }
+
+    .section-read .dados .buttons {
+        width: 55%;
+    }
+
+    .modal {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .burger {
+        display: flex;
+    }
+
+    nav {
+        margin: auto;
+        width: 70%;
+        justify-content: space-around;
+        padding-right: 30%;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+        height: 180px;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        flex-direction: column;
+        background-color: #ffbb00;
+        transition: transform 0.5s ease-in;
+        transform: translateX(-100%);
+    }
+
+    nav ul.ul2 {
+        margin-top: 179px;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 8px;
+    }
+
+    .modal {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 860px) {
+    .section-read .dados .buttons {
+        width: 60%;
+    }
+}
+
+@media (max-width: 860px) {
+    .section-read .dados .buttons {
+        width: 70%;
+    }
+
+    .modal {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .dados {
+        min-width: 210px;
+    }
+}
+
+@media (max-width: 408px) {
+    html {
+        font-size: 7px;
+    }
+
+    .section-read .dados .buttons {
+        width: 80%;
+    }
+
+    .burger {
+        height: 20px;
+    }
+    
+    .lines {
+        height: 4px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 5.5px;
+    }
+
+    .section-read .dados .buttons {
+        width: 100%;
+    }
+
+    .section-read {
+        width: 80%;
+        margin: auto;
+    }
+
+    .burger {
+        height: 15px;
+    }
+    
+    .lines {
+        height: 3px;
+        width: 25px;
+    }
+
+    .modal {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 250px) {
+    .burger {
+        height: 10px;
+    }
+    
+    .lines {
+        height: 2px;
+        width: 20px;
+    }
+
+    .section-read {
+        width: 60%;
+    }
+
+    .modal {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 235px) {
+    .section-read .dados .buttons {
+        width: 100%;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
+
+@media (max-width: 190px) {
+    .modal {
+        width: 98%;
+    }
+}
+
+
+.ul-active {
+    transform: translateX(0%);
+}
+
+.navbar-active {
+    background-color: #ffbb00;
+}
+
+/* .burger-active {
+    background-color: #fff;
+} */
+
+/* .logo-active a {
+    color: #292A2C;
+} */
